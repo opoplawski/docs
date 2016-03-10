@@ -143,14 +143,6 @@ Fail2ban reads its configuration files so that all `.conf` files are read first 
 
         cp jail.conf jail.local
 
-2.  **If using CentOS or Fedora** open `jail.local` and set the `backend` to `systemd`. This is not necessary on Debian 8, even though it is a SystemD system.
-
-    {: .file-excerpt}
-    /etc/fail2ban/jail.local
-    :   ~~~
-        backend = systemd
-        ~~~
-
 #### IP Whitelisting        
 
 Add any IPs to the `ignoreip` line that you wish Fail2ban to ignore. By default, this command will not ban the localhost. If you work from a single IP address often, it may be beneficial to add it to the ignore list:
